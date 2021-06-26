@@ -46,13 +46,13 @@ with more than
 one line code."""
 unicode = u"\u00dcnic\u00f6de"
 raw_str = r"raw \n string"
-
+not_raw_str = "raw \n string" # \n is considered as new line without r
 print(strings)
 print(char)
 print(multiline_str)
 print(unicode)
 print(raw_str)
-
+print(not_raw_str)
 # Boolean literals
 x = (1 == True)
 y = (0 == False)
@@ -74,9 +74,9 @@ print("__________________________How bool() works?______________________________
 test = []
 print(test, 'is', bool(test))
 
-test = [0]
+test = [0] # it's not an empty list. Its size is 1, len(test)
 print(test, 'is', bool(test))
-
+print(test, 'is', len(test))
 test = 0.0
 print(test, 'is', bool(test))
 

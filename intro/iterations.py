@@ -48,11 +48,14 @@ lang = ("Python", "C", "C++", "Java")
 for i in range(len(lang)):
    print(lang[i])
 
+for i in lang:
+   print(i)
+
 print("__________________________for loop using list________________________________________________")
 
 a_list = ["a", "b", "c", "d"]
 
-for iteration, item in enumerate(a_list):
+for iteration, item in enumerate(a_list):  # enumerate gives both an element and index.
     if iteration == 2:
         break
     else:
