@@ -26,21 +26,22 @@ squares = list(map(my_func, my_list))
 print(squares)              # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
-# Function as a argument
+# Function as a argument/it avoids defining same func again and again (reusebility)
 def calculate(f, x, y):
     return f(x, y)
-
 
 def add(x, y):
     return x + y
 
-
 def sub(x, y):
     return x - y
 
+def sayHi(fname, lname):
+    return f"Hi {fname} {lname}"
 
 print("Add :", calculate(add, 10, 20))
 print("Subtract : ", calculate(sub, 10, 20))
+print("Say Hi: ", calculate(sayHi, "Nazia", "Nasrat"))
 
 # Anonymous Function: lambda f, t: f(*t)
 print("Add : ", calculate(lambda x, y: x + y, 10, 20))

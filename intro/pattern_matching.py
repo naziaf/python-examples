@@ -55,7 +55,7 @@ print("\n################# re.findall() ########################")
 string = 'hello 12 hi 89. Howdy 34'
 pattern = '\d+'
 
-result = re.findall(pattern, string)
+result = list(map(lambda n: int(n), re.findall(pattern, string)))
 print(result)
 
 print("\n################# re.split() ########################")
